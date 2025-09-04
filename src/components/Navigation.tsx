@@ -69,7 +69,7 @@ const Navigation = () => {
                   }`}
                 >
                   <User className="h-4 w-4" />
-                  <span className="hidden sm:block">{user.username}</span>
+                  <span className="hidden sm:block">{user.name || user.username}</span>
                 </Link>
                 <Button
                   variant="ghost"
@@ -113,7 +113,7 @@ const Navigation = () => {
                   
                   {user && (
                     <div className="pt-4 border-t border-border space-y-2">
-                      <NavLink path="/profile" label={`Profile (${user.username})`} icon={User} />
+                      <NavLink path="/profile" label={`Profile (${user.name || user.username})`} icon={User} />
                       <Button
                         variant="ghost"
                         onClick={() => {
